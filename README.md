@@ -14,10 +14,12 @@
 ### 1. Cài Git:
 ```bash
 sudo apt install git
+```bash
 
 ### 2. Cài Hugo:
 ```bash
 sudo apt install hugo
+```bash
 
 ## 📁 Bước 2: Tạo project Hugo
 ```bash
