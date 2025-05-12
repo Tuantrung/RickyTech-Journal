@@ -14,39 +14,39 @@
 ### 1. Cài Git:
 ```bash
 sudo apt install git
-```bash
+```
 
 ### 2. Cài Hugo:
 ```bash
 sudo apt install hugo
-```bash
+```
 
 ## 📁 Bước 2: Tạo project Hugo
 ```bash
 hugo new site my-tech-blog
 cd my-tech-blog
-
+```
 ## 🎨 Bước 3: Thêm theme PaperMod
 ```bash
 git init
 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 echo 'theme = "PaperMod"' >> config.toml
-
+```
 ## ✍️ Bước 4: Tạo bài viết đầu tiên
 ```bash
 hugo new posts/hello-world.md
-
+```
 Chỉnh sửa content/posts/hello-world.md, đổi nội dung và bỏ dòng draft: true.
 ## 🌍 Bước 5: Xem thử blog trên máy local
 ```bash
 hugo server -D
-
+```
 Truy cập http://localhost:1313 để xem blog.
 ## 🔧 Bước 6: Tích hợp CMS (Decap CMS)
 ### 1. Tạo thư mục CMS:
 ```bash
 mkdir -p static/admin
-
+```
 ### 2. Tạo file static/admin/index.html
 ```bash
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ mkdir -p static/admin
   <body>
   </body>
 </html>
-
+```
 ### 3. Tạo file static/admin/config.yml
 ```bash
 backend:
@@ -79,7 +79,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
+```
 ## 🚀 Bước 7: Đẩy lên GitHub và deploy
 #### 1. Tạo repo trên GitHub
 #### 2. Thêm remote và đẩy code:
@@ -87,12 +87,12 @@ collections:
 git remote add origin https://github.com/your-username/my-tech-blog.git
 git branch -M main
 git push -u origin main
-
+```
 ## 📦 Bước 8: Build site và deploy GitHub Pages
 Build site:
 ```bash
 hugo
-
+```
 Kết quả build nằm trong thư mục /public.
 
 Bạn có thể:
