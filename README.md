@@ -31,6 +31,7 @@ cd my-tech-blog
 git init
 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 echo 'theme = "PaperMod"' >> config.toml
+echo 'theme = "PaperMod"' >> hugo.toml
 ```
 ## ✍️ Bước 4: Tạo bài viết đầu tiên
 ```bash
