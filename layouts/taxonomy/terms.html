@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range $key, $value := .Data.Terms }}
+<section style="margin-bottom:2rem;">
+    <h2 id="{{ $key }}">
+        <a href="{{ "/tags/" | relLangURL }}{{ $key | urlize }}">{{ $key }}</a>
+        <span style="font-size:0.8em; color:#aaa;">({{ len $value }})</span>
+    </h2>
+    <ul>
+        {{ range $value.Pages }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a> <span style="color:#888;">({{ .Date.Format "2006-01-02"
+                }})</span>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
+{{ end }}
