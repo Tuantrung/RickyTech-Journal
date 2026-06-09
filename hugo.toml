@@ -143,19 +143,19 @@ tocopen = false
     [[languages.en.menu.main]]
     identifier = "Archives"
     name = "Archives"
-    url = "/archives/"
+    url = "archives/"
     weight = 10
 
     [[languages.en.menu.main]]
     identifier = "Topics"
     name = "Topics"
-    url = "/tags/"
+    url = "tags/"
     weight = 20
 
     [[languages.en.menu.main]]
     identifier = "Search"
     name = "Search"
-    url = "/search/"
+    url = "search/"
     weight = 30
 
   [languages.vi]
@@ -171,17 +171,17 @@ tocopen = false
     [[languages.vi.menu.main]]
     identifier = "Archives"
     name = "Lưu trữ"
-    url = "/vi/archives/"
+    url = "archives/"
     weight = 10
 
     [[languages.vi.menu.main]]
     identifier = "Topics"
     name = "Chủ đề"
-    url = "/vi/tags/"
+    url = "tags/"
     weight = 20
 
     [[languages.vi.menu.main]]
     identifier = "Search"
     name = "Tìm kiếm"
-    url = "/vi/search/"
+    url = "search/"
     weight = 30
