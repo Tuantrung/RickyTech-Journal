@@ -1,11 +1,8 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
 title = 'RickyTech-Journal'
 theme = 'PaperMod'
 
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+defaultContentLanguage = 'en'
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -13,9 +10,23 @@ buildFuture = false
 buildExpired = false
 pygmentsUseClasses = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [minify]
 disableXML = true
 minifyOutput = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[markup.highlight]
+noClasses = false
 
 [params]
 env = "production"
@@ -92,59 +103,85 @@ tocopen = false
   name = "github"
   url = "https://github.com/Tuantrung"
 
-[params.analytics.google]
-SiteVerificationTag = "XYZabc"
+  [params.analytics.google]
+  SiteVerificationTag = "XYZabc"
 
-[params.analytics.bing]
-SiteVerificationTag = "XYZabc"
+  [params.analytics.bing]
+  SiteVerificationTag = "XYZabc"
 
-[params.analytics.yandex]
-SiteVerificationTag = "XYZabc"
+  [params.analytics.yandex]
+  SiteVerificationTag = "XYZabc"
 
-[params.cover]
-hidden = true
-hiddenInList = true
-hiddenInSingle = true
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
 
-[params.editPost]
-URL = "https://github.com/<path_to_repo>/content"
-Text = "Suggest Changes"
-appendFilePath = true
+  [params.editPost]
+  URL = "https://github.com/<path_to_repo>/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
 
-[params.fuseOpts]
-isCaseSensitive = false
-shouldSort = true
-location = 0
-distance = 1_000
-threshold = 0.4
-minMatchCharLength = 0
-limit = 10
-keys = [ "title", "permalink", "summary", "content" ]
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  limit = 10
+  keys = [ "title", "permalink", "summary", "content" ]
 
-[[menu.main]]
-identifier = "Archives"
-name = "Archives"
-url = "/Archives/"
-weight = 10
+[languages]
 
-[[menu.main]]
-identifier = "Topics"
-name = "Topics"
-url = "/tags/"
-weight = 20
+  [languages.en]
+  languageName = "English"
+  languageCode = "en-us"
+  weight = 1
+  title = "RickyTech-Journal"
 
-[[menu.main]]
-identifier = "Search"
-name = "Search"
-url = "/search/"
-weight = 30
+    [[languages.en.menu.main]]
+    identifier = "Archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 10
 
-[markup.highlight]
-noClasses = false
+    [[languages.en.menu.main]]
+    identifier = "Topics"
+    name = "Topics"
+    url = "/tags/"
+    weight = 20
 
-[outputs]
-home = [ "HTML", "RSS", "JSON" ]
+    [[languages.en.menu.main]]
+    identifier = "Search"
+    name = "Search"
+    url = "/search/"
+    weight = 30
 
-[taxonomies]
-tag = "tags"
-category = "categories"
+  [languages.vi]
+  languageName = "Tiếng Việt"
+  languageCode = "vi"
+  weight = 2
+  title = "RickyTech-Journal"
+
+    [languages.vi.params.homeInfoParams]
+    Title = "Xin chào 👋"
+    Content = "Chào mừng đến với Ricky Tech Journal"
+
+    [[languages.vi.menu.main]]
+    identifier = "Archives"
+    name = "Lưu trữ"
+    url = "/vi/archives/"
+    weight = 10
+
+    [[languages.vi.menu.main]]
+    identifier = "Topics"
+    name = "Chủ đề"
+    url = "/vi/tags/"
+    weight = 20
+
+    [[languages.vi.menu.main]]
+    identifier = "Search"
+    name = "Tìm kiếm"
+    url = "/vi/search/"
+    weight = 30
